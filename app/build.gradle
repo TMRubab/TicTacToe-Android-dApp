@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.tictactoe"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    //implementation 'com.android.support:appcompat-v7:26.0.3'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'org.web3j:core:4.5.6'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.9.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+ //   androidTestImplementation 'com.android.support.test:runner:1.0.1'
+   // androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+   // compile ('org.web3j:core:3.1.1-android')//library for web3j
+   // compile "org.ethereum:solcJ-all:0.4.8"
+   // compile 'com.fasterxml.jackson.core:jackson-core:2.9.4'
+   // compile "io.reactivex.rxjava2:rxjava:2.0.2"
+}

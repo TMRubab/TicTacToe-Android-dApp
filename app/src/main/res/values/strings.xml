@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="deploy">Deploy</string>
+    <string name="password">Password</string>
+    <string name="ab1234">#%Ab1234</string>
+    <string name="name">Name</string>
+    <string name="send">Send</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
