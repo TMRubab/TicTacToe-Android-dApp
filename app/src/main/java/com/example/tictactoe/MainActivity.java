@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Web3j web3j = Web3j.build(new HttpService("http://10.0.2.2:8545")); //for android
-        Web3j web3j = Web3j.build(new HttpService("http://192.168.0.101:8545")); //for wifi
+        Web3j web3j = Web3j.build(new HttpService("http://10.0.2.2:8545")); //for android
+       // Web3j web3j = Web3j.build(new HttpService(/* your wifi IP address */)); //for wifi
         Credentials credentials = getCredentialsFromPrivateKey();
         //deployCon(web3j, credentials);
         tictactoe = loadContract(CONTRACT_ADDRESS, web3j, credentials);
