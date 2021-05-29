@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,157 +7,535 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/lLayoutStart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="110dp">
-
-        <Button
-            android:id="@+id/bttnSignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up" />
-
-        <Button
-            android:id="@+id/bttnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log In" />
-
-        <EditText
-            android:id="@+id/txtID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="ID"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/txtName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            tools:visibility="invisible" />
-
-        <EditText
-            android:id="@+id/txtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="password"
-            android:inputType="textPassword"
-            tools:visibility="invisible" />
-
-        <Button
-            android:id="@+id/bttnSend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Send"
-            tools:visibility="invisible" />
-
-
-        <Button
-            android:id="@+id/bttnCreateGame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Create Game" />
-
-        <Button
-            android:id="@+id/bttnJoinGame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Join Game" />
+        android:layout_height="wrap_content"
+        android:id="@+id/loutSignLog"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textViewId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:gravity="center_horizontal"
+            android:text="Please Log In or Sign Up"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnSignUp"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Sign Up"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnLogIn"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Log In"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loutSignLogInput"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Log In/Sign Up"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:text="         ID           "/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtID"
+                android:hint="Enter ID"
+                android:inputType="number"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:text="      Name       "/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtName"
+                android:hint="Enter your name" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:text="   Password   "/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPassword"
+                android:hint="Enter password"
+                android:inputType="textPassword"/>
+
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnSignUpOk"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Ok"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnLogInBack"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Back"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lLayoutGame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="invisible">
+        android:layout_height="wrap_content"
+        android:id="@+id/loutGame"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtViewGame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Game Number: " />
-
-        <TableRow
-            android:id="@+id/tblRow0"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtViewID"
+            android:text="Player ID: "
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/bttn0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/bttn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/bttn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tblRow1"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtViewGamePlayed"
+            android:text="Game played: "
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtViewGameWin"
+            android:text="Game win: "
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/bttn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/bttn4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/bttn5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tblRow2"
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnCreateGame"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Create Game"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnJoinGame"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Join Game"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnLogout"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Log Out"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loutCreateGame"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Creating Game"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:text="  Game Size  "/>
+
+            <Spinner
+                android:id="@+id/txtGameSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:spinnerMode="dropdown"
+                android:entries="@array/array_name" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:text="   Password   "/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtGamePassword"
+                android:hint="Enter game password"
+                android:inputType="textPassword"/>
+
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnCreateGameOk"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Ok"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnCreateGameBack"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Back"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loutJoinGame"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Joining Game"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text=" Game ID "/>
+
+                <EditText
+                    android:id="@+id/txtGameID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter game ID"
+                    android:inputType="number"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="Password"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtJoinGamePassword"
+                    android:hint="Enter game password"
+                    android:inputType="textPassword"/>
+
+
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttnJoinGameOk"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:text="Ok"/>
 
             <Button
-                android:id="@+id/bttn6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttnJoinGameBack"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:text="Back"/>
 
-            <Button
-                android:id="@+id/bttn7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-            <Button
-                android:id="@+id/bttn8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Join with"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/lViewPlayers"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="#f00"
+                android:dividerHeight="1dp"
+                />
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loutTicTacToe"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHidden"
+            android:visibility="invisible"
+            android:text="">
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtPlayersName"
+            android:text=""
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtCurrentPlayer"
+            android:text=""
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn0"
+                android:tag="0"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn1"
+                android:tag="1"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn2"
+                android:tag="2"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn3"
+                android:tag="3"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn4"
+                android:tag="4"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn5"
+                android:tag="5"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn6"
+                android:tag="6"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn7"
+                android:tag="7"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/bttn8"
+                android:tag="8"
+                android:layout_margin="3dp"
+                android:textSize="60dp"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnGameStart"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Start"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/bttnGameBack"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Back"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

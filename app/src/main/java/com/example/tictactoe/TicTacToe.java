@@ -120,7 +120,7 @@ public class TicTacToe extends Contract {
     }
 
     public Flowable<NewGameEventResponse> newGameEventFlowable(DefaultBlockParameter startBlock, DefaultBlockParameter endBlock) {
-        EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress());
+        EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress().substring(2)); // "substring(2)" added in the end
         filter.addSingleTopic(EventEncoder.encode(NEWGAME_EVENT));
         return newGameEventFlowable(filter);
     }
@@ -153,7 +153,7 @@ public class TicTacToe extends Contract {
     }
 
     public Flowable<PlayerJoinedGameEventResponse> playerJoinedGameEventFlowable(DefaultBlockParameter startBlock, DefaultBlockParameter endBlock) {
-        EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress());
+        EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress().substring(2)); // "substring(2)" added in the end
         filter.addSingleTopic(EventEncoder.encode(PLAYERJOINEDGAME_EVENT));
         return playerJoinedGameEventFlowable(filter);
     }
@@ -188,7 +188,7 @@ public class TicTacToe extends Contract {
     }
 
     public Flowable<PlayerMadeMoveEventResponse> playerMadeMoveEventFlowable(DefaultBlockParameter startBlock, DefaultBlockParameter endBlock) {
-        EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress());
+        EthFilter filter = new EthFilter(startBlock, endBlock, getContractAddress().substring(2)); // "substring(2)" added in the end
         filter.addSingleTopic(EventEncoder.encode(PLAYERMADEMOVE_EVENT));
         return playerMadeMoveEventFlowable(filter);
     }
